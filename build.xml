@@ -7,7 +7,9 @@
     <target name="build"
         depends="build-common,phpmd-ci,phpcs-ci,npm-run" />
     <target name="build-diff"
-        depends="build-common-diff,phpmd-ci-diff,phpcs-ci-diff,npm-run" />
+	depends="build-common-diff,phpmd-ci-diff,phpcs-ci-diff,npm-run" />
+    <target name="build-diff-eslint"
+        depends="build-common-diff,phpmd-ci-diff,phpcs-ci-diff,eslint" />
 
     <target name="build-clean"
         depends="clean,build-common,phpdox,phploc,pdepend,phpmd-ci,phpcs-ci,phpcpd,phpcb" />
